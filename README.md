@@ -20,6 +20,11 @@ research/
   03-hakalau-specifics.md        Species, avian malaria, IIT program, Hawaii regulations
   04-integrated-suppression.md   Bti, In2Care, source reduction, full layered protocol
   05-recommendations.md          Synthesis: what to buy, in what quantity, and why
+  06-solar-power.md              Solar power for the trap network
+  07-co2-logistics.md            CO2 sourcing and logistics
+  08-power-strategy-alternatives.md  Off-grid and hybrid power options
+  09-bats-and-damselflies.md     Native predators - hoary bat + Megalagrion (sanctuary path)
+  10-sensei-lanai.md             Sensei Lanai retreat suppression model reference
 docs/
   index.html                     Single-page presentation of the findings (GitHub Pages target)
 README.md                         This file

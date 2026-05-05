@@ -25,6 +25,7 @@ research/
   08-power-strategy-alternatives.md  Off-grid and hybrid power options
   09-bats-and-damselflies.md     Native predators - hoary bat + Megalagrion (sanctuary path)
   10-sensei-lanai.md             Sensei Lanai retreat suppression model reference
+  11-legal-introductions.md      What you can legally introduce - ducks, Toxorhynchites, pinao
 docs/
   index.html                     Single-page presentation of the findings (GitHub Pages target)
 README.md                         This file

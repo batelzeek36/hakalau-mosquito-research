@@ -580,6 +580,59 @@ footer .heart{color:var(--coral);display:inline-block;animation:beat 1.5s ease-i
 .why p:last-child{margin-bottom:0}
 .why strong{color:var(--text)}
 
+/* ----- COLLAPSIBLE SECTIONS ----- */
+.sect{display:block}
+.sect > summary{
+  list-style:none !important;
+  cursor:pointer;
+  display:flex !important;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1.2rem;
+  padding:1.4rem 0 1.4rem;
+  border-radius:12px;
+  outline:none;
+  transition:transform .15s ease,padding-left .15s ease;
+  position:relative;
+}
+.sect > summary::-webkit-details-marker,
+.sect > summary::marker{display:none !important}
+.sect > summary::before{content:none}
+.sect > summary:hover{padding-left:.4rem}
+.sect > summary:hover .sect-chevron{color:var(--teal)}
+.sect[open] > summary{padding-bottom:.8rem}
+.sect[open] > summary .sect-chevron{transform:rotate(180deg);color:var(--teal)}
+.sect-title{flex:1;min-width:0}
+.sect-title h2{margin-bottom:0;text-wrap:balance}
+.sect-title .section-eyebrow{margin-bottom:.7rem}
+.sect-chevron{
+  font-family:var(--mono);
+  font-size:1.5rem;line-height:1;
+  color:var(--text-3);
+  margin-top:.5rem;
+  flex-shrink:0;
+  transition:transform .3s ease,color .15s;
+  user-select:none;
+}
+.sect > summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
+
+/* Reduce section padding when collapsed (keep visual rhythm tight) */
+section.section{transition:padding .25s ease}
+section.section:has(.sect:not([open])){padding-top:2.2rem;padding-bottom:1.4rem}
+@media (min-width:760px){
+  section.section:has(.sect:not([open])){padding-top:3rem;padding-bottom:2.2rem}
+}
+
+/* Smooth content reveal — modern browsers only, falls back to instant */
+@supports selector(::details-content){
+  .sect::details-content{
+    block-size:0;overflow:clip;
+    transition:block-size .35s ease,content-visibility .35s allow-discrete;
+  }
+  .sect[open]::details-content{block-size:auto}
+  @starting-style{.sect[open]::details-content{block-size:0}}
+}
+
 /* ----- UTILITY ----- */
 section[id]{scroll-margin-top:4.5rem}
 .ico{width:1.2em;height:1.2em;display:inline-block;vertical-align:-0.18em;flex-shrink:0}
